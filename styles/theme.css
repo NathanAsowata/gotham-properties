@@ -1,0 +1,93 @@
+/*  This file contains global styles to ensure consistent design  */
+
+:root{
+    --gotham-black: #000;
+    --gotham-blue: #2638d9;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Urbanist', system-ui;
+    background-color: whitesmoke;
+}
+nav{
+    position: sticky;
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    justify-content: center;
+    padding: 15px 40px;
+    border-bottom: 1px solid var(--gotham-black);
+    box-shadow: 0px 2px 7px #808080;
+}
+nav a{
+    text-decoration: none;
+}
+.logo{
+    font-size: 30px;
+    font-family: 'Akronim', sans-serif;
+    font-weight: 700;
+    color: var(--gotham-black);
+    margin: 0;
+    padding: 0;
+}
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+#menu a{
+    text-decoration: none;
+    color: var(--gotham-black);
+}
+#menu a:hover{
+    color: var(--gotham-blue);
+}
+#mobile-menu{
+    display: none;
+}
+
+/* Navigation on mobile devices */
+@media only screen and (max-width: 600px) {
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #menu{
+        position: absolute;
+        top: 81px;
+        width: 99vw;
+        height: 100px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        border: 1px solid var(--gotham-black);
+        margin: -15px -40px;
+        background-color: white;
+        padding: 15px 39.5px;
+        box-shadow: 0px 2px 7px #808080;
+    }
+    #mobile-menu{
+        display: block;
+        float: right;
+        font-size: 30px;
+    }
+}
+
+footer{
+    background-color: var(--gotham-black);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+#euro-symbol{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}

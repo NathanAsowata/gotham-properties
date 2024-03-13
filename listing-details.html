@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Gotham Properties is a real estate agency based in Gotham.">
+        <meta name="keywords" content="Real estate, Gotham, Gotham properties, apartments for rent, houses for sale">
+        
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Akronim&family=Urbanist&display=swap" rel="stylesheet">
+        
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        
+        <!-- Favicon -->
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+        
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="./styles/theme.css">
+        <link rel="stylesheet" href="./styles/details.css">
+    
+        <!-- Javascript Files -->
+        <script src="./scripts/global.js" defer></script>
+        <script type="module" src="./scripts/details.js" defer></script>
+    
+        <!-- Title tage -->
+        <title>Listing Details</title>
+    </head>
+<body>
+
+    <!-- Navigation menu -->
+    <nav role="navigation">
+        <!-- Site Logo -->
+        <a href="index.html">
+            <h1 class="logo">Gotham Properties</h1>
+        </a>
+
+        <!-- Navigation menu -->
+        <ul id="menu" role="menu">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact Us</a>
+            </li>
+        </ul> 
+
+        <!-- Mobile menu icon -->
+        <i id="mobile-menu" class="bi bi-list" onclick="handleResponsiveMenu()"></i>
+    </nav>
+    
+    <!-- Hero Image -->
+    <section id="listing-hero">
+    </section>
+
+    <main class="container">
+
+        <!-- Listing details -->
+        <article class="listing-content">
+            <p id="listing-address">123 Main Street</p>
+            <h1 id="listing-price"> </h1>
+            <section id="listing-overview">
+                <span>
+                    <i class="bi bi-house-check"></i>
+                    <br>
+                    <p id="listing-type"></p>
+                </span>
+                <span> 
+                    <i class="bi bi-card-image"></i>
+                    <br>
+                    <p id="listing-bed"></p>
+                </span>
+                <span> 
+                    <i class="bi bi-droplet-fill"></i>
+                    <br>
+                    <p id="listing-bath"></p>
+                </span>
+                <!-- Amenities will be dynamically generated here -->
+            </section>
+
+            <!-- Images -->
+            <section class="images"></section>
+
+            <!-- Description -->
+            <section id="listing-description">
+                <h2>Description</h2>
+                <p id="description"></p>
+            </section>
+        </article>
+
+        <!-- Agent Details -->
+        <aside>
+            <section id="agent-card">
+                
+                </section>
+        </aside>
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>
+            &copy; <span id="year"></span>. All rights reserved. Designed and built by Nathan Asowata. 
+        </p>
+    </footer>
+</body>
+</html> 

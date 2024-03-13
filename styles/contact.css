@@ -1,0 +1,181 @@
+.container{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+.contact-form-container, .contact-info-container{
+    display: grid;
+    justify-content: center;
+    align-items: space-between;
+    padding: 50px 10px;
+}
+.contact-form{
+    background-color: white;
+    padding: 25px;
+    border: 1px solid var(--gotham-black);
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px lightgrey;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    gap: 10px;
+    grid-template-areas: "form-title form-title"
+                          "firstname-field lastname-field"
+                          "email-field email-field"
+                          "message-field message-field"
+                          "submit submit";
+}
+#form-title{
+    grid-area: form-title;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 2px lightgrey;
+}
+#firstname-field{
+    grid-area: firstname-field;
+}
+#lastname-field{
+    grid-area: lastname-field;
+}
+#email-field{
+    grid-area: email-field;
+}
+#message-field{
+    grid-area: message-field;
+}
+#message{
+    border-radius: 10px;
+}
+#submit{
+    grid-area: submit;
+    color: white;
+    background-color: var(--gotham-black);
+    cursor: pointer;
+    margin-top: 0px;
+}
+#submit:hover{
+    background-color: var(--gotham-blue);
+}
+fieldset{
+    border: none;
+    margin-bottom: 20px;
+}
+label{
+    margin-top: 25px;
+    font-family: system-ui;
+    font-weight: 600;
+}
+input, textarea, button{
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: 1px solid var(--gotham-black);
+    font-family: inherit;
+    font-size: 16px;
+    background-color: whitesmoke;
+}
+input:focus, textarea:focus{
+    outline: 1px solid var(--gotham-black);
+}
+.contact-info{
+    width: 400px;
+    background-color: white;
+    box-shadow: 2px 2px 4px lightgrey;
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid var(--gotham-black);
+}
+.contact-info h2{
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 1px 1px 2px lightgrey;
+}
+.contact-info p{
+    margin-bottom: 10px;
+}
+.contact-info-title{
+    font-weight: 600;
+    font-family: system-ui;
+}
+.social{
+    margin-top: 50px;
+    font-size: 30px;
+}
+.social p{
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px lightgrey;
+    text-transform: capitalize;
+}
+#facebook{
+    color: #1877F2;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightgrey;
+    border: 1px solid #1877F2;
+}
+#twitter{
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightgrey;
+    border: 1px solid var(--gotham-black);
+}
+#instagram{
+    color:#833AB4;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightgrey;
+    border: 1px solid #833AB4;
+}
+#linkedin{
+    color: #0077B5;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px lightgrey;
+    border: 1px solid #0077B5;
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1200px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-info{
+        width: 75vw;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-form-container, .contact-info-container{
+        padding: 25px;
+        width: 350px;
+        display: grid;
+        justify-content: center;
+    }
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+    .contact-info{
+        font-size: 14px;
+    }
+    .contact-form h1, .contact-info h2, .social p{
+        font-size: 20px;
+    }
+    .social{
+        font-size: 22px;
+    }
+}
